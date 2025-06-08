@@ -1,4 +1,66 @@
+<!-- Main container for the portfolio homepage -->
+    <div class="container mx-auto max-w-7xl bg-gray-900 bg-opacity-70 backdrop-blur-lg rounded-2xl shadow-2xl overflow-hidden md:flex md:flex-row md:items-center p-8 lg:p-12">
 
-Muhamamd Saad Abid - FrontEnd Engineer ---- Loading ...
+        <!-- Left section: Introduction text and Call-to-Action buttons -->
+        <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0 pr-0 md:pr-8 lg:pr-16">
+            <!-- Greeting text with improved visibility -->
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-light text-purple-200 mb-2 animate-fade-in-slide-up">
+                Hello, I'm
+            </h1>
+            <!-- Your Name - large and prominent for clear identification -->
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-white mb-4 animate-fade-in-slide-up delay-100">
+                Muhammad Saad Abid
+            </h2>
+            <!-- Your Profession - clearly stated -->
+            <p class="text-3xl sm:text-4xl lg:text-4xl font-medium text-purple-300 mb-8 animate-fade-in-slide-up delay-200">
+                Frontend Engineer
+            </p>
+
+            <!-- Call-to-Action Buttons with improved styling and hover effects -->
+            <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in-slide-up delay-300">
+                <!-- Primary CTA: My Project - highly visible and inviting -->
+                <!-- <button class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transform transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-opacity-50">
+                    <i class="fas fa-code mr-2"></i> My Projects
+                </button> -->
+                <!-- Secondary CTA: Download CV - clear and accessible, slightly less prominent -->
+                <!-- <button class="bg-transparent border-2 border-purple-400 hover:border-purple-500 text-purple-300 hover:text-white font-semibold py-3 px-8 rounded-full shadow-md transform transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-opacity-50">
+                    <i class="fas fa-download mr-2"></i> Download CV
+                </button> -->
+            </div>
+        </div>
+
+        <!-- Right section: Profile image and Social Media links -->
+        <div class="md:w-1/2 flex justify-center md:justify-end animate-fade-in-slide-up delay-400">
+            <!-- Profile image card -->
+            <div class="bg-white p-6 rounded-3xl shadow-xl transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl max-w-sm w-full">
+                <!-- Placeholder for user's image -->
+                <img src="profile_img.svg" alt="Muhammad Saad Abid's Profile" class="rounded-2xl w-full h-auto object-cover mb-6 shadow-md">
+
+                <!-- Social Media Icons - more visible and interactive -->
+                <div class="flex justify-center space-x-6 text-gray-700">
+                    <!-- <a href="#" class="text-blue-600 hover:text-blue-800 transition-colors duration-200 transform hover:scale-110">
+                        <i class="fab fa-facebook-f text-3xl"></i>
+                    </a> -->
+                    <!-- <a href="#" class="text-sky-500 hover:text-sky-700 transition-colors duration-200 transform hover:scale-110">
+                        <i class="fab fa-twitter text-3xl"></i>
+                    </a> -->
+                    <a href="https://www.linkedin.com/in/saadabid/" class="text-blue-700 hover:text-blue-900 transition-colors duration-200 transform hover:scale-110">
+                        <i class="fab fa-linkedin-in text-3xl"></i>
+                    </a>
+                    <a href="https://www.behance.net/msaad3" class="text-pink-600 hover:text-pink-800 transition-colors duration-200 transform hover:scale-110">
+                        <i class="fab fa-behance text-3xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+     <!-- Loading indicator at the bottom -->
+    <div id="loading-indicator" class="flex flex-col items-center justify-center mt-8 text-purple-300">
+        <i class="fas fa-spinner fa-spin text-4xl mb-3 spinner"></i>
+        <p class="text-lg font-medium">Loading soon...</p>
+    </div>
+
 
 <router-outlet />
