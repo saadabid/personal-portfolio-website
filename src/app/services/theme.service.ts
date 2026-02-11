@@ -42,7 +42,7 @@ export class ThemeService {
     }
     
     // Default to light
-    return 'light';
+    return 'dark';
   }
 
   toggleTheme(): void {
