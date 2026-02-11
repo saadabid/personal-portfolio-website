@@ -1,0 +1,50 @@
+<section class="get-in-touch-section py-16 px-4 sm:px-6 lg:px-8 bg-background dark:bg-background transition-colors duration-300" id="get-in-touch">
+  <div class="max-w-4xl w-full mx-auto">
+    <h2 class="text-2xl sm:text-3xl font-semibold text-text-primary dark:text-text-primary text-center mb-8 transition-colors duration-300">
+      Get In Touch
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+      <!-- Email -->
+      <a
+        [href]="emailHref"
+        class="contact-card group flex flex-col items-center p-6 bg-background-card dark:bg-background-card rounded-xl shadow-md dark:shadow-lg dark:shadow-black/20 hover:shadow-xl dark:hover:shadow-xl dark:hover:shadow-black/30 transition-all duration-300 hover:-translate-y-2 cursor-pointer relative overflow-hidden"
+        [attr.aria-label]="'Send email to ' + contact.email"
+      >
+        <div class="icon-container w-12 h-12 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:bg-brand-primary/30 dark:group-hover:bg-brand-primary/40 transition-all duration-300">
+          <i class="fas fa-envelope text-brand-primary dark:text-brand-primary text-xl group-hover:rotate-12 transition-transform duration-300" aria-hidden="true"></i>
+        </div>
+        <span class="text-sm text-text-secondary dark:text-text-secondary mb-1 group-hover:text-brand-primary dark:group-hover:text-brand-primary transition-colors duration-300">Email</span>
+        <span class="text-base font-medium text-text-primary dark:text-text-primary break-all group-hover:text-brand-primary dark:group-hover:text-brand-primary transition-colors duration-300">{{ contact.email }}</span>
+      </a>
+
+      <!-- LinkedIn -->
+      <a
+        [href]="contact.linkedin"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="contact-card group flex flex-col items-center p-6 bg-background-card dark:bg-background-card rounded-xl shadow-md dark:shadow-lg dark:shadow-black/20 hover:shadow-xl dark:hover:shadow-xl dark:hover:shadow-black/30 transition-all duration-300 hover:-translate-y-2 cursor-pointer relative overflow-hidden"
+        aria-label="Visit LinkedIn profile"
+      >
+        <div class="icon-container w-12 h-12 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:bg-brand-primary/30 dark:group-hover:bg-brand-primary/40 transition-all duration-300">
+          <i class="fab fa-linkedin-in text-brand-primary dark:text-brand-primary text-xl group-hover:rotate-6 transition-transform duration-300" aria-hidden="true"></i>
+        </div>
+        <span class="text-sm text-text-secondary dark:text-text-secondary mb-1 group-hover:text-brand-primary dark:group-hover:text-brand-primary transition-colors duration-300">LinkedIn</span>
+        <span class="text-base font-medium text-text-primary dark:text-text-primary group-hover:text-brand-primary dark:group-hover:text-brand-primary transition-colors duration-300">View Profile</span>
+      </a>
+
+      <!-- Phone -->
+      <a
+        [href]="phoneHref"
+        class="contact-card group flex flex-col items-center p-6 bg-background-card dark:bg-background-card rounded-xl shadow-md dark:shadow-lg dark:shadow-black/20 hover:shadow-xl dark:hover:shadow-xl dark:hover:shadow-black/30 transition-all duration-300 hover:-translate-y-2 cursor-pointer relative overflow-hidden"
+        [attr.aria-label]="'Call ' + contact.phone"
+      >
+        <div class="icon-container w-12 h-12 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:bg-brand-primary/30 dark:group-hover:bg-brand-primary/40 transition-all duration-300">
+          <i class="fas fa-phone text-brand-primary dark:text-brand-primary text-xl group-hover:rotate-12 transition-transform duration-300" aria-hidden="true"></i>
+        </div>
+        <span class="text-sm text-text-secondary dark:text-text-secondary mb-1 group-hover:text-brand-primary dark:group-hover:text-brand-primary transition-colors duration-300">Phone</span>
+        <span class="text-base font-medium text-text-primary dark:text-text-primary group-hover:text-brand-primary dark:group-hover:text-brand-primary transition-colors duration-300">{{ contact.phone }}</span>
+      </a>
+    </div>
+  </div>
+</section>

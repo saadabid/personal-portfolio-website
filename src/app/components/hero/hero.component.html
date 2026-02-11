@@ -1,0 +1,52 @@
+<section class="hero-section min-h-screen flex flex-col items-center justify-center gap-8 bg-background dark:bg-background py-12 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
+  <div class="max-w-4xl w-full mx-auto flex flex-col items-center gap-8">
+    <!-- Profile Image - On Top (mouse-move tilt) -->
+    <div class="profile-image-wrapper flex-shrink-0 animate-fade-in-slide-up">
+      <div class="relative group">
+        <div class="absolute -inset-1 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full opacity-30 group-hover:opacity-60 blur-sm transition-opacity duration-500"></div>
+        <div class="relative ring-4 ring-brand-primary/20 dark:ring-brand-primary/30 rounded-full p-1.5 bg-background-card dark:bg-background-card shadow-xl dark:shadow-2xl dark:shadow-black/40 transition-all duration-300 group-hover:ring-brand-primary/40 group-hover:scale-105">
+          <img
+            [src]="profileImagePath"
+            [alt]="name + ' - Profile'"
+            class="profile-img w-40 h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56 rounded-full object-cover transition-transform duration-500 group-hover:scale-105"
+            width="224"
+            height="224"
+            loading="eager"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Hero Content - Below Image -->
+    <div class="text-center space-y-6 animate-fade-in-slide-up">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-text-primary dark:text-text-primary mb-4 transition-colors duration-300">
+        {{ name }}
+      </h1>
+
+      <h2 class="text-xl sm:text-2xl lg:text-3xl font-semibold text-brand-primary dark:text-brand-primary mb-6 transition-colors duration-300">
+        {{ title }}
+      </h2>
+
+      <div class="inline-block mb-6">
+        <span class="px-4 py-2 bg-brand-secondary/20 dark:bg-brand-secondary/30 text-brand-primary dark:text-brand-secondary rounded-full text-sm sm:text-base font-medium transition-colors duration-300">
+          {{ experience }}
+        </span>
+      </div>
+
+      <p class="text-base sm:text-lg lg:text-xl text-text-secondary dark:text-text-secondary max-w-3xl mx-auto leading-relaxed mb-8 transition-colors duration-300">
+        {{ description }}
+      </p>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="mt-8 sm:mt-12 flex justify-center animate-fade-in-slide-up delay-400">
+    <a href="#get-in-touch" class="flex flex-col items-center text-text-light dark:text-text-light transition-colors duration-300 hover:text-brand-primary dark:hover:text-brand-primary group/scroll">
+      <span class="text-sm mb-2">Scroll to explore</span>
+      <i class="fas fa-chevron-down animate-bounce group-hover/scroll:translate-y-1 transition-transform" aria-hidden="true"></i>
+    </a>
+  </div>
+</section>
+
+<!-- Get In Touch Section - Separate Component -->
+<app-get-in-touch></app-get-in-touch>

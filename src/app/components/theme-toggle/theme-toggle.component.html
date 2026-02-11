@@ -1,0 +1,35 @@
+<button
+  (click)="toggleTheme(); $event.stopPropagation()"
+  class="theme-toggle group relative flex items-center gap-1 p-1.5 rounded-full bg-background-card dark:bg-background-card border-2 border-border-soft dark:border-border-soft shadow-lg dark:shadow-xl dark:shadow-black/30 hover:shadow-xl dark:hover:shadow-2xl hover:border-brand-primary/50 dark:hover:border-brand-primary/50 transition-all duration-300 hover:-translate-y-1 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2 dark:focus:ring-offset-gray-900 backdrop-blur-sm"
+  [attr.aria-label]="currentTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+  [attr.title]="currentTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+  type="button"
+  (mousedown)="$event.preventDefault()"
+>
+  <!-- Sun Option -->
+  <span 
+    class="flex items-center justify-center w-10 h-10 rounded-full transition-all duration-300"
+    [ngClass]="{
+      'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 scale-110 opacity-100': currentTheme === 'light',
+      'opacity-60 hover:opacity-100': currentTheme === 'dark'
+    }"
+  >
+    <i class="fas fa-sun text-lg" aria-hidden="true"></i>
+  </span>
+  
+  <!-- Moon Option -->
+  <span 
+    class="flex items-center justify-center w-10 h-10 rounded-full transition-all duration-300"
+    [ngClass]="{
+      'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 scale-110 opacity-100': currentTheme === 'dark',
+      'opacity-60 hover:opacity-100': currentTheme === 'light'
+    }"
+  >
+    <i class="fas fa-moon text-lg" aria-hidden="true"></i>
+  </span>
+  
+  <!-- Tooltip label -->
+  <span class="theme-tooltip absolute -bottom-9 left-1/2 -translate-x-1/2 px-3 py-2 rounded-lg bg-gray-800 dark:bg-gray-200 text-white dark:text-gray-900 text-xs font-medium opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200 whitespace-nowrap shadow-lg">
+    {{ currentTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode' }}
+  </span>
+</button>

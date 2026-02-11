@@ -1,0 +1,25 @@
+.theme-toggle {
+  cursor: pointer;
+  position: relative;
+  min-width: 5.5rem;
+
+  &:hover {
+    transform: translateY(-2px) scale(1.02);
+  }
+
+  &:active {
+    transform: translateY(0) scale(0.98);
+  }
+
+  &:hover {
+    box-shadow: 0 8px 24px rgba(108, 124, 255, 0.25);
+  }
+
+  :host-context(.dark) &:hover {
+    box-shadow: 0 8px 24px rgba(108, 124, 255, 0.35);
+  }
+}
+
+.theme-tooltip {
+  z-index: 100;
+}

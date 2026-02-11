@@ -3,13 +3,25 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Muhammad Saad Abid - Frontend Engineer</title>
+  <title>Muhammad Saad Abid - Senior Software Engineer | Frontend & UX Engineering</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Muhammad Saad Abid - Senior Software Engineer specializing in Frontend & UX Engineering with 7+ years of experience building scalable Angular applications and enterprise design systems for government and fintech platforms in Saudi Arabia.">
+  <meta name="keywords" content="Muhammad Saad Abid, Senior Software Engineer, Frontend Engineer, UX Engineering, Angular Developer, Saudi Arabia, Web Development, Enterprise Design Systems">
+  <meta name="author" content="Muhammad Saad Abid">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Muhammad Saad Abid - Senior Software Engineer | Frontend & UX Engineering">
+  <meta property="og:description" content="7+ years of experience building scalable Angular applications and enterprise design systems for government and fintech platforms in Saudi Arabia.">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Muhammad Saad Abid - Senior Software Engineer">
+  <meta name="twitter:description" content="Frontend & UX Engineering specialist with 7+ years of experience in Angular and enterprise design systems.">
+  
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-  <!-- Tailwind CSS CDN for utility-first styling -->
-  <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Fonts - Inter for clean typography -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <!-- Font Awesome for icons (e.g., download icon, social media icons) -->
@@ -63,10 +75,28 @@
     .delay-600 {
       animation-delay: 0.6s;
     }
+
   </style>
+  <script>
+    // Prevent flash of unstyled content by applying theme before Angular loads
+    (function() {
+      try {
+        const theme = localStorage.getItem('portfolio-theme');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else if (theme === 'light') {
+          document.documentElement.classList.remove('dark');
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {
+        // Ignore errors
+      }
+    })();
+  </script>
 </head>
 
-<body class="bg-gradient-to-br from-indigo-950 to-purple-950 text-white min-h-screen flex items-center justify-center p-4">
+<body>
   <app-root></app-root>
 </body>
 

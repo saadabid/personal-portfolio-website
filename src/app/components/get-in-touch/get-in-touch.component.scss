@@ -1,0 +1,95 @@
+.get-in-touch-section {
+  .grid {
+    align-items: stretch;
+    .contact-card {
+      height: 100%;
+      display: flex;
+    }
+  }
+}
+
+.contact-card {
+  position: relative;
+  transform-style: preserve-3d;
+  will-change: transform;
+  transform-origin: center center;
+  contain: layout style paint;
+
+  &:focus {
+    outline: 2px solid var(--color-brand-primary);
+    outline-offset: 2px;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-brand-primary);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(108, 124, 255, 0.2);
+  }
+
+  min-height: 140px;
+
+  @media (max-width: 640px) {
+    min-height: 120px;
+  }
+
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.3s ease;
+
+  &:active {
+    transform: translateY(-1px);
+  }
+
+  &:hover {
+    z-index: 10;
+  }
+}
+
+.icon-container {
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    background: var(--color-brand-primary);
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+    z-index: -1;
+  }
+}
+
+.contact-card:hover .icon-container::before {
+  opacity: 0.1;
+}
+
+.contact-card span {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-card:hover span:last-child {
+  transform: translateY(-1px);
+}
+
+.contact-card:hover {
+  box-shadow: 0 20px 40px rgba(108, 124, 255, 0.15), 0 0 0 1px rgba(108, 124, 255, 0.1);
+}
+
+:host-context(.dark) .contact-card:hover {
+  box-shadow: 0 20px 40px rgba(108, 124, 255, 0.25), 0 0 0 1px rgba(108, 124, 255, 0.2);
+  background-color: rgba(26, 26, 36, 0.8);
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .contact-card:active {
+    transform: translateY(-1px);
+  }
+}

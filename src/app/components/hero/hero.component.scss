@@ -1,0 +1,22 @@
+// Hero component specific styles
+.hero-section {
+  scroll-behavior: smooth;
+}
+
+// Profile image - interactive (mouse-move tilt)
+.profile-image-wrapper {
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out;
+  will-change: transform;
+
+  .profile-img {
+    display: block;
+    border: 3px solid transparent;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .group:hover .profile-img {
+    border-color: var(--color-brand-primary);
+    box-shadow: 0 0 0 4px rgba(108, 124, 255, 0.15);
+  }
+}
