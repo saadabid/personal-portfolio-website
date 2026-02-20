@@ -1,0 +1,25 @@
+.projects-section {
+  .project-card {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+      border-color 0.3s ease;
+
+    &:hover:not(.project-card-static) {
+      box-shadow: 0 12px 24px rgba(108, 124, 255, 0.12), 0 0 0 1px rgba(108, 124, 255, 0.08);
+    }
+  }
+
+  :host-context(.dark) .project-card:hover:not(.project-card-static) {
+    box-shadow: 0 12px 24px rgba(129, 140, 248, 0.2), 0 0 0 1px rgba(129, 140, 248, 0.15);
+  }
+
+  .project-card:focus {
+    outline: 2px solid var(--color-brand-primary);
+    outline-offset: 2px;
+  }
+
+  .project-card:focus-visible {
+    outline: 2px solid var(--color-brand-primary);
+    outline-offset: 2px;
+  }
+}

@@ -1,0 +1,59 @@
+<section
+  class="projects-section py-16 px-4 sm:px-6 lg:px-8 bg-background-section dark:bg-background-section transition-colors duration-300"
+  id="projects"
+>
+  <div class="w-full mx-auto">
+    <h2 class="text-2xl sm:text-3xl font-semibold text-text-primary dark:text-text-primary text-center mb-10 transition-colors duration-300">
+      Projects
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      @for (project of projects; track project.name) {
+        @if (project.url) {
+          <a
+            [href]="getProjectUrl(project)"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-card group block p-6 rounded-xl bg-background-card dark:bg-background-card shadow-md dark:shadow-lg dark:shadow-black/20 transition-all duration-300 hover:shadow-lg dark:hover:shadow-xl dark:hover:shadow-black/30 hover:-translate-y-1 cursor-pointer border border-transparent hover:border-brand-primary/30 dark:hover:border-brand-primary/30"
+          >
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <h3 class="text-lg font-bold text-text-primary dark:text-text-primary transition-colors duration-300 group-hover:text-brand-primary dark:group-hover:text-brand-primary">
+                {{ project.name }}
+              </h3>
+              <i class="fas fa-external-link-alt text-brand-primary/60 text-sm mt-1 flex-shrink-0 group-hover:text-brand-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" aria-hidden="true"></i>
+            </div>
+            <p class="text-sm text-text-secondary dark:text-text-secondary leading-relaxed mb-4 transition-colors duration-300">
+              {{ project.description }}
+            </p>
+            <div class="flex flex-wrap gap-2">
+              @for (tech of project.technologies; track tech) {
+                <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-brand-primary/10 dark:bg-brand-primary/20 text-brand-primary dark:text-brand-primary">
+                  {{ tech }}
+                </span>
+              }
+            </div>
+          </a>
+        } @else {
+          <div
+            class="project-card project-card-static group p-6 rounded-xl bg-background-card dark:bg-background-card shadow-md dark:shadow-lg dark:shadow-black/20 border border-transparent"
+          >
+            <h3 class="text-lg font-bold text-text-primary dark:text-text-primary mb-3 transition-colors duration-300">
+              {{ project.name }}
+            </h3>
+            <p class="text-sm text-text-secondary dark:text-text-secondary leading-relaxed mb-4 transition-colors duration-300">
+              {{ project.description }}
+            </p>
+            <div class="flex flex-wrap gap-2">
+              @for (tech of project.technologies; track tech) {
+                <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-brand-primary/10 dark:bg-brand-primary/20 text-brand-primary dark:text-brand-primary">
+                  {{ tech }}
+                </span>
+              }
+            </div>
+          </div>
+        }
+      }
+    </div>
+  </div>
+  <p class="text-center mt-10 text-text-secondary dark:text-text-secondary text-sm">More projects</p>
+</section>

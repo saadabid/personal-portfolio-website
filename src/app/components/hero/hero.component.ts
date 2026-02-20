@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 import { GetInTouchComponent } from '../get-in-touch/get-in-touch.component';
+import { TechnicalSkillsComponent } from '../technical-skills/technical-skills.component';
+import { ExperienceComponent } from '../experience/experience.component';
+import { ProjectsComponent } from '../projects/projects.component';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [GetInTouchComponent],
+  imports: [GetInTouchComponent, TechnicalSkillsComponent, ExperienceComponent, ProjectsComponent],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss'
 })
