@@ -34,8 +34,9 @@ export class ExperienceComponent {
         { text: 'Mainly contributing to the Mudad platform mudad.com.sa — Saudi Arabia\'s digital payroll and compliance system under the Ministry of Human Resources & Social Development—focusing on Angular frontend development.', link: 'https://mudad.com.sa' },
         { text: 'Developing, maintaining, and documenting the organization\'s Design system in Storybook, ensuring reusable, scalable, and consistent Angular UI components.' },
         { text: 'Spearheaded UI modernization initiatives including Angular upgrades and legacy component refactoring, improving maintainability and performance.' },
+        { text: 'Implemented and followed frontend security best practices such as XSS prevention, Content Security Policy (CSP), and secure handling of user input in web applications.' },
         { text: 'Lead initiatives to improve product usability by collaborating with UX teams, analyzing user behavior, and refining interface flows to deliver a smoother and more intuitive experience.' },
-        { text: 'Leveraged Cursor and ChatGPT to accelerate development tasks, generate optimized code snippets, automate refactoring, and enhance documentation efficiency.' }
+        { text: 'Leveraged AI-assisted development to accelerate development tasks, generate optimized code snippets, automate refactoring, and enhance documentation efficiency.' }
       ]
     },
     {
