@@ -30,8 +30,8 @@ export class ProjectsComponent {
       technologies: ['Angular 8+', 'Html/CSS', 'Sass', 'Bootstrap', 'Storybook', 'Jenkins']
     },
     {
-      name: 'Angular Design System Library',
-      description: 'Designed and implemented a scalable Angular Design System with reusable components and Storybook documentation, enabling consistent UI development across multiple applications.',
+      name: 'Enterprise Design System (Angular + Storybook)',
+      description: 'Built and maintained an enterprise-grade scalable Angular design system and reusable component library (30+ components), integrated with Storybook for interactive documentation and visual regression testing → reduced UI development time by 2–3× and ensured pixel-perfect consistency across 3+ enterprise applications.',
       technologies: ['Angular 8+', 'Html/CSS', 'Sass', 'Bootstrap', 'Storybook', 'Jenkins']
     },
     {
