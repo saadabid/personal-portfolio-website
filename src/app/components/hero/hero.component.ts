@@ -19,5 +19,7 @@ export class HeroComponent {
   description = 'Building Scalable & Secure Enterprise Web Applications and enterprise design systems for fintech platforms in Saudi Arabia. Specialized in usability optimization, performance enhancement, and scalable UI architecture.';
 
   profileImagePath = 'profile_img.svg';
+  githubUrl = 'https://github.com/saadabid';
+  linkedinUrl = 'https://www.linkedin.com/in/saadabid';
 
 }
