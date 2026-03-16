@@ -16,7 +16,7 @@ export class HeroComponent {
   title = 'Senior Software Engineer';
   subTitle = 'Frontend • Angular | UX-Focused • Pixel-Perfect • Responsive | CSP • XSS Protection';
   experience = '7+ years of experience';
-  description = 'Building Scalable & Secure Enterprise Web Applications and enterprise design systems for fintech platforms in Saudi Arabia. Specialized in usability optimization, performance enhancement, and scalable UI architecture.';
+  description = 'Building Scalable & Secure Enterprise Web Applications and Design systems for fintech platforms in Saudi Arabia. Specialized in usability optimization, performance enhancement, and scalable UI architecture.';
 
   profileImagePath = 'profile_img.svg';
   githubUrl = 'https://github.com/saadabid';
